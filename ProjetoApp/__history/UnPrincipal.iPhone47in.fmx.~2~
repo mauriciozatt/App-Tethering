@@ -1,0 +1,18 @@
+inherited FrmPrincipal_iPhone47in: TFrmPrincipal_iPhone47in
+  ClientHeight = 647
+  ClientWidth = 375
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 375.000000000000000000
+    Size.Height = 647.000000000000000000
+    inherited EdtQuantidadeLiberar: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited btnLiberar: TButton
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Button2: TButton
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+end

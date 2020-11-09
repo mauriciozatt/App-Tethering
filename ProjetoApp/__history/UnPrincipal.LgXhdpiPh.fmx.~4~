@@ -1,0 +1,15 @@
+inherited FrmPrincipal_LgXhdpiPh: TFrmPrincipal_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited btnLiberar: TButton
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Button2: TButton
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+end

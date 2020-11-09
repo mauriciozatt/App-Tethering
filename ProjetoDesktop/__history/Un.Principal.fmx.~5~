@@ -1,0 +1,42 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Principal'
+  ClientHeight = 317
+  ClientWidth = 621
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object lblStatus: TLabel
+    StyledSettings = [Style]
+    Position.X = 16.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Arial'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.FontColor = claCrimson
+    Text = 'Status Desconectado...'
+    TabOrder = 2
+  end
+  object TetheringManagerDesktop: TTetheringManager
+    OnPairedFromLocal = TetheringManagerDesktopPairedFromLocal
+    Password = 'MacarraoComQueijo'
+    Text = 'TetheringManagerDesktop'
+    AllowedAdapters = 'Network'
+    Left = 160
+    Top = 96
+  end
+  object TetheringAppProfileDesktop: TTetheringAppProfile
+    Manager = TetheringManagerDesktop
+    Text = 'TetheringAppProfileDesktop'
+    Group = 'GrupoTeste'
+    Actions = <>
+    Resources = <>
+    Left = 392
+    Top = 96
+  end
+end

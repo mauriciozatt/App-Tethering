@@ -1,0 +1,67 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 367
+  ClientWidth = 358
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Client
+    Size.Width = 358.000000000000000000
+    Size.Height = 367.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Quantidade de ra'#231#227'o a Liberar'
+      TabOrder = 0
+    end
+    object EdtQuantidadeLiberar: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 16.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 241.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Button1: TButton
+      Cursor = crHandPoint
+      StyledSettings = [FontColor]
+      Position.X = 264.000000000000000000
+      Position.Y = 53.000000000000000000
+      TabOrder = 2
+      Text = 'Liberar '
+      TextSettings.Font.Family = 'Arial'
+      TextSettings.Font.Size = 11.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TintColor = claRoyalblue
+    end
+    object btnSincronizar: TCornerButton
+      Cursor = crHandPoint
+      StyledSettings = [Family, Size, Style]
+      Position.X = 16.000000000000000000
+      Position.Y = 232.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 321.000000000000000000
+      Size.Height = 89.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Sincronizar Dados Sistema Desktop'
+      TextSettings.FontColorForState.Focused = claSteelblue
+      TouchTargetExpansion.Left = 15.000000000000000000
+      TouchTargetExpansion.Top = 15.000000000000000000
+      TouchTargetExpansion.Right = 10.000000000000000000
+      TouchTargetExpansion.Bottom = 10.000000000000000000
+      XRadius = 10.000000000000000000
+      YRadius = 20.000000000000000000
+    end
+  end
+end

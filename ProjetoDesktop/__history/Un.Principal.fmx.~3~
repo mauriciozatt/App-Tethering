@@ -1,0 +1,27 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Principal'
+  ClientHeight = 317
+  ClientWidth = 621
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object TetheringManagerDesktop: TTetheringManager
+    Text = 'TetheringManagerDesktop'
+    AllowedAdapters = 'Network'
+    Left = 352
+    Top = 128
+  end
+  object TetheringAppProfileDesktop: TTetheringAppProfile
+    Manager = TetheringManagerDesktop
+    Text = 'TetheringAppProfileDesktop'
+    Group = 'GrupoTeste'
+    Actions = <>
+    Resources = <>
+    Left = 176
+    Top = 128
+  end
+end

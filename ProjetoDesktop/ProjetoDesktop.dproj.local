@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/08/28 23:18:55.000.559,=C:\Users\Igor\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/08 22:13:14.000.353,=C:\Users\Igor\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/08 22:14:06.000.198,=C:\Users\Igor\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/08 22:18:54.000.751,C:\Users\Igor\Desktop\Uteis\Projetos Delphi\App-Tethering\ProjetoDesktop\Un.Principal.fmx=C:\Users\Igor\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2020/11/08 22:18:54.000.751,C:\Users\Igor\Desktop\Uteis\Projetos Delphi\App-Tethering\ProjetoDesktop\Un.Principal.pas=C:\Users\Igor\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/08 22:19:04.000.850,C:\Users\Igor\Desktop\Uteis\Projetos Delphi\App-Tethering\ProjetoDesktop\ProjetoDesktop.dproj=C:\Users\Igor\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android64="Nexus_5_API_29" Android="3200745858d86571"/>
+	</ActiveMobileDevice>
+</BorlandProject>

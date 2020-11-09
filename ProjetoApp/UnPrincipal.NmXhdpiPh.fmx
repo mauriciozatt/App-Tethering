@@ -1,0 +1,19 @@
+inherited FrmPrincipal_NmXhdpiPh: TFrmPrincipal_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited btnLiberar: TButton
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Button2: TButton
+      Position.Y = 1.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited lblStatus: TLabel
+      TextSettings.Font.Size = 11.000000000000000000
+    end
+  end
+end

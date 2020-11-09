@@ -1,0 +1,71 @@
+unit UnPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Edit, IPPeerClient, IPPeerServer,
+  System.Tether.Manager, System.Tether.AppProfile;
+
+type
+  TFrmPrincipal = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    EdtQuantidadeLiberar: TEdit;
+    Button1: TButton;
+    btnSincronizar: TCornerButton;
+    TetheringManagerApp: TTetheringManager;
+    TetheringAppProfileApp: TTetheringAppProfile;
+    Button2: TButton;
+    lblStatus: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure TetheringManagerAppPairedToRemote(const Sender: TObject;
+      const AManagerInfo: TTetheringManagerInfo);
+    procedure TetheringManagerAppRequestManagerPassword(const Sender: TObject;
+      const ARemoteIdentifier: string; var Password: string);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+{$R *.iPhone47in.fmx IOS}
+{$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.iPhone55in.fmx IOS}
+{$R *.NmXhdpiPh.fmx ANDROID}
+
+procedure TFrmPrincipal.Button2Click(Sender: TObject);
+begin
+  TetheringManagerApp.AutoConnect;
+end;
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+  Caption := Format('Identificador App: %s', [TetheringManagerApp.Identifier]);
+end;
+
+procedure TFrmPrincipal.TetheringManagerAppPairedToRemote(const Sender: TObject;
+  const AManagerInfo: TTetheringManagerInfo);
+begin
+  lblStatus.Text := Format('Connectado: %s %s', [AManagerInfo.ManagerIdentifier,
+    AManagerInfo.ManagerName]);
+  lblStatus.TextSettings.FontColor := TAlphaColorRec.Blue;
+end;
+
+procedure TFrmPrincipal.TetheringManagerAppRequestManagerPassword
+  (const Sender: TObject; const ARemoteIdentifier: string;
+  var Password: string);
+begin
+  Password := 'MacarraoComQueijo';
+end;
+
+end.

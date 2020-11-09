@@ -1,0 +1,68 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Principal'
+  ClientHeight = 328
+  ClientWidth = 620
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object lblStatus: TLabel
+    Align = Top
+    StyledSettings = [Style]
+    Size.Width = 620.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Arial'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.FontColor = claCrimson
+    Text = 'Status Desconectado...'
+    TabOrder = 2
+  end
+  object StringGrid1: TStringGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 620.000000000000000000
+    Size.Height = 303.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 616.000000000000000000
+    Viewport.Height = 278.000000000000000000
+  end
+  object TetheringManagerDesktop: TTetheringManager
+    OnPairedFromLocal = TetheringManagerDesktopPairedFromLocal
+    Password = 'MacarraoComQueijo'
+    Text = 'TetheringManagerDesktop'
+    AllowedAdapters = 'Network'
+    Left = 184
+    Top = 120
+  end
+  object TetheringAppProfileDesktop: TTetheringAppProfile
+    Manager = TetheringManagerDesktop
+    Text = 'TetheringAppProfileDesktop'
+    Group = 'GrupoTeste'
+    Actions = <>
+    Resources = <>
+    OnResourceReceived = TetheringAppProfileDesktopResourceReceived
+    Left = 360
+    Top = 120
+  end
+  object cdsDados: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 240
+    Top = 224
+    object cdsDadosvalor: TStringField
+      FieldName = 'valor'
+      Size = 1000
+    end
+  end
+end

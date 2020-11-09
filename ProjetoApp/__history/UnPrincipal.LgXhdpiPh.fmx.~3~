@@ -1,0 +1,20 @@
+inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited Button1: TButton
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited CornerButton1: TCornerButton
+      Position.X = 112.000000000000000000
+      Position.Y = 192.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 97.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+  end
+end

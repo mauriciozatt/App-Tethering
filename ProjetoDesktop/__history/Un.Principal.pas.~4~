@@ -1,0 +1,48 @@
+unit Un.Principal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, IPPeerClient,
+  IPPeerServer, System.Tether.Manager, System.Tether.AppProfile,
+  FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TFrmPrincipal = class(TForm)
+    TetheringManagerDesktop: TTetheringManager;
+    TetheringAppProfileDesktop: TTetheringAppProfile;
+    lblStatus: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure TetheringManagerDesktopPairedFromLocal(const Sender: TObject;
+      const AManagerInfo: TTetheringManagerInfo);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+  Caption := Format('Aplicativo Desktop : %s',
+    [TetheringManagerDesktop.Identifier]);
+end;
+
+procedure TFrmPrincipal.TetheringManagerDesktopPairedFromLocal
+  (const Sender: TObject; const AManagerInfo: TTetheringManagerInfo);
+begin
+  lblStatus.Text := Format('Conectado: %s %s', [AManagerInfo.ManagerIdentifier,
+    AManagerInfo.ManagerName]);
+
+  lblStatus.TextSettings.FontColor := TAlphaColorRec.Blue;
+end;
+
+end.
